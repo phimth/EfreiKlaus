@@ -13,6 +13,7 @@ class DragonBall extends Figurine{
     constructor(Hero) {
       super()
       this._character = Hero
+      this.type = `Dragon Ball figurine ${this._character}`
       console.log(`${this._character} is singing -->
       CHA-LA HEAD CHA-LA
       Nani ga okite mo kibun wa heno-heno kappa
@@ -25,6 +26,12 @@ class DragonBall extends Figurine{
     isMoved(){
         console.log(`Kamé Hamé Ha!`)
     }
+
+    getType(){
+        return this.type
+    }
+
+    
 }
 
 module.exports = {DragonBall,DBHeroes};
