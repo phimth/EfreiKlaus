@@ -6,6 +6,7 @@ class Elf {
     
     constructor(name){
        this.nickname = name
+       this.emballages=[]
     }
     getNikname(){
         return this.nickname
@@ -39,6 +40,37 @@ class Elf {
             return toys
         }
         return pack.toy
+    }
+
+    put(table,item){
+        if(table.content.length<10){
+            table.content.push(item)
+        }
+        else{
+            console.log(`There are too much items on this table, can't add ${item}`)
+        }
+    }
+    take(table,item){
+        if(item){
+            table.pick(item)
+        }
+        else{
+            table.take()
+        }
+
+    }
+    in(tapis){
+
+    }
+    out(tapis){
+
+    }
+    look(table){
+        console.log('Table contains: ');
+        
+        for(var i = 0; i<table.content.length; i++){
+            console.log(table.content[i].constructor.name)
+        }
     }
 }
 

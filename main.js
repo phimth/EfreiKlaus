@@ -6,6 +6,8 @@ const Box = require('./Step2/Box')
 const Elf = require('./Step2/Elf')
 const GiftWrap = require('./Step2/GiftWrap')
 const Packaging = require('./Step2/Packaging')
+const Table = require('./Step3/Table')
+const ConveyorBelt = require('./Step3/ConveyorBelt')
 
 //STEP 1
 console.log('--- STEP #1 ---')
@@ -34,5 +36,17 @@ var toy = majdi.unpack(paper)
 console.log(toy === findus)
 var r = majdi.unpack(paper)
 console.log((r == null))
+
+// Step #3
+console.log('--- STEP #3 ---')
+
+var table = new Table()
+var conveyor = new ConveyorBelt()
+
+majdi.put(table, paper)
+majdi.put(table, findus)
+majdi.put(table, box)
+majdi.take(table, findus)
+majdi.look(table)
 
 
